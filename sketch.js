@@ -54,8 +54,8 @@ function draw() {
     path.y = height/2;
   }
   
-  camera.position.x=displayWidth/2;
-  camera.position.y=boy.y/2;
+  camera.position.x=boy.displayWidth/2;
+  camera.position.y=boy.y;
     createCash();
     createDiamonds();
     createJwellery();
@@ -76,7 +76,7 @@ function draw() {
       
     }else{
       if(swordGroup.isTouching(boy)) {
-      
+      gameState=END;
     }
   }
     
@@ -93,7 +93,7 @@ function draw() {
   drawSprites();
   textSize(20);
   fill(255);
-  text("Treasure: "+ treasureCollection, width-50,height-100);
+  text("Treasure: "+ treasureCollection, width-100,height-30);
   }
 
 }
